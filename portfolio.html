@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Naini Stories – Sharing Stories, Moments & Creativity. A lifestyle content creator bringing you beautiful moments, stories, and creative inspiration." />
+  <meta name="keywords" content="Naini Stories, lifestyle, Instagram, creativity, stories, moments, content creator" />
+  <meta property="og:title" content="Naini Stories" />
+  <meta property="og:description" content="Sharing Stories, Moments & Creativity" />
+  <meta property="og:image" content="hero.png" />
+  <meta property="og:type" content="website" />
+  <title>Naini Stories</title>
+
+  <!-- Google Fonts: Playfair Display (serif) + DM Sans (sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       LOADER
+  ══════════════════════════════════════════════ -->
+  <div id="loader" role="status" aria-label="Loading Naini Stories">
+    <div class="loader-inner">
+      <img src="logo.png" alt="Naini Stories logo" class="loader-logo" />
+      <div class="loader-bar">
+        <div class="loader-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════════════ -->
+  <header id="site-header" role="banner">
+    <nav class="nav-wrap" aria-label="Main navigation">
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo" id="nav-logo" aria-label="Naini Stories Home">
+        <img src="logo.png" alt="Naini Stories logo" class="nav-logo-img" onerror="this.style.display='none'" />
+      </a>
+
+      <!-- Desktop nav links -->
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+        <li><a href="portfolio.html" class="nav-link active" id="nav-portfolio">Portfolio</a></li>
+        <li><a href="about.html" class="nav-link" id="nav-about">About</a></li>
+        <li><a href="contact.html" class="nav-link" id="nav-contact">Contact</a></li>
+      </ul>
+
+      <!-- Right actions -->
+      <div class="nav-actions">
+        <a href="https://www.instagram.com/naini_.stories?igsh=b200Y3k2dm5yeWFx" target="_blank"
+          rel="noopener noreferrer" class="nav-instagram" id="nav-instagram-btn" aria-label="Follow on Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+            <circle cx="12" cy="12" r="4.5" />
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+          </svg>
+          <span>Follow</span>
+        </a>
+
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"
+          aria-controls="mobile-menu">
+          <span class="ham-line"></span>
+          <span class="ham-line"></span>
+          <span class="ham-line"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+      <ul role="list">
+        <li><a href="index.html" class="mob-link" id="mob-home">Home</a></li>
+        <li><a href="portfolio.html" class="mob-link" id="mob-portfolio">Portfolio</a></li>
+        <li><a href="about.html" class="mob-link" id="mob-about">About</a></li>
+        <li><a href="contact.html" class="mob-link" id="mob-contact">Contact</a></li>
+      </ul>
+      <a href="https://www.instagram.com/naini_.stories?igsh=b200Y3k2dm5yeWFx" target="_blank" rel="noopener noreferrer"
+        class="mob-instagram" id="mob-instagram-btn">Follow on Instagram</a>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════
+       MARQUEE STRIP
+  ══════════════════════════════════════════════ -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Stories &nbsp;✦&nbsp;</span>
+      <span>Moments &nbsp;✦&nbsp;</span>
+      <span>Creativity &nbsp;✦&nbsp;</span>
+      <span>Lifestyle &nbsp;✦&nbsp;</span>
+      <span>Inspiration &nbsp;✦&nbsp;</span>
+      <span>Joy &nbsp;✦&nbsp;</span>
+      <span>Stories &nbsp;✦&nbsp;</span>
+      <span>Moments &nbsp;✦&nbsp;</span>
+      <span>Creativity &nbsp;✦&nbsp;</span>
+      <span>Lifestyle &nbsp;✦&nbsp;</span>
+      <span>Inspiration &nbsp;✦&nbsp;</span>
+      <span>Joy &nbsp;✦&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       PORTFOLIO / GALLERY
+  ══════════════════════════════════════════════ -->
+  <section id="portfolio" class="section portfolio-section" aria-labelledby="portfolio-heading"
+    style="padding-top: 140px; min-height: 80vh;">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">Gallery</p>
+      <h2 class="section-title" id="portfolio-heading">A Glimpse Into My World</h2>
+      <p class="section-desc">Each frame captures a story waiting to be told. Scroll through moments of beauty, warmth,
+        and everyday magic.</p>
+    </div>
+
+    <div class="portfolio-grid">
+      <div class="portfolio-item portfolio-large reveal">
+        <div class="portfolio-img-wrap">
+          <img src="image1.jpg" alt="Naini laughing joyfully at the beach" loading="lazy" />
+          <div class="portfolio-overlay">
+            <p class="portfolio-caption">Morning Moments</p>
+            <p class="portfolio-tag">Lifestyle</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item reveal delay-1">
+        <div class="portfolio-img-wrap">
+          <img src="image2.jpg" alt="Naini at birthday celebration in purple lehenga" loading="lazy" />
+          <div class="portfolio-overlay">
+            <p class="portfolio-caption">Golden Hour</p>
+            <p class="portfolio-tag">Nature</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item reveal delay-2">
+        <div class="portfolio-img-wrap">
+          <img src="image3.jpg" alt="Naini as a baby with blue flower headband" loading="lazy" />
+          <div class="portfolio-overlay">
+            <p class="portfolio-caption">Cozy Corner</p>
+            <p class="portfolio-tag">Aesthetic</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item reveal delay-3">
+        <div class="portfolio-img-wrap">
+          <img src="image.png" alt="Naini Stories – beautiful moments" loading="lazy" />
+          <div class="portfolio-overlay">
+            <p class="portfolio-caption">Garden Stories</p>
+            <p class="portfolio-tag">Moments</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-cta reveal">
+      <a href="https://www.instagram.com/naini_.stories?igsh=b200Y3k2dm5yeWFx" target="_blank" rel="noopener noreferrer"
+        class="btn btn-dark" id="portfolio-instagram-btn">View More on Instagram</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════ -->
+  <footer class="site-footer" id="footer" role="contentinfo">
+    <div class="footer-inner">
+      <!-- Heading -->
+      <h2 class="footer-heading">Let's Work Together</h2>
+
+      <!-- Contact info -->
+      <p class="footer-contact-info">
+        Email: <a href="mailto:nagendrachellu7@gmail.com">nagendrachellu7@gmail.com</a>
+        <span class="footer-dot">·</span>
+        Phone: <a href="tel:+918125661060">+91 81256 61060</a>
+      </p>
+
+      <!-- Social icons row -->
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/naini_.stories?igsh=b200Y3k2dm5yeWFx" target="_blank"
+          rel="noopener noreferrer" class="footer-social-link" id="footer-instagram" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+            <circle cx="12" cy="12" r="4.5" />
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+          </svg>
+          <span>INSTAGRAM</span>
+        </a>
+        <a href="https://www.youtube.com/@NainishaChellu" target="_blank" rel="noopener noreferrer"
+          class="footer-social-link" id="footer-youtube" aria-label="YouTube">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path
+              d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+            <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" />
+          </svg>
+          <span>YOUTUBE</span>
+        </a>
+        <a href="https://pin.it/45lWkYanX" target="_blank" rel="noopener noreferrer" class="footer-social-link"
+          id="footer-pinterest" aria-label="Pinterest">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M8 12a4 4 0 1 1 4.5 3.97L11 21" />
+            <circle cx="12" cy="10" r="8" />
+          </svg>
+          <span>PINTEREST</span>
+        </a>
+      </div>
+
+      <div class="footer-divider" role="separator"></div>
+
+      <!-- Copyright -->
+      <p class="footer-copy">© 2026 NAINI STORIES. ALL RIGHTS RESERVED.</p>
+
+      <!-- Credit -->
+      <p class="footer-credit">
+        Website designed &amp; developed by <strong>Chellu Nagendra Vara Prasad</strong>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

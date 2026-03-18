@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bunny's Photography – Capturing timeless moments and creative stories." />
+  <meta name="keywords" content="Bunny's Photography, photography, Hyderabad, creative, stories" />
+  <meta property="og:title" content="Bunny's Photography" />
+  <meta property="og:description" content="Let's Create Together" />
+  <meta property="og:image" content="logo.png" />
+  <meta property="og:type" content="website" />
+  <title>Contact – Naini Stories</title>
+
+  <!-- Google Fonts: Playfair Display (serif) + DM Sans (sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       LOADER
+  ══════════════════════════════════════════════ -->
+  <div id="loader" role="status" aria-label="Loading Bunny's Photography">
+    <div class="loader-inner">
+      <img src="logo.png" alt="Bunny's Photography logo" class="loader-logo" />
+      <div class="loader-bar">
+        <div class="loader-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════════════ -->
+  <header id="site-header" role="banner">
+    <nav class="nav-wrap" aria-label="Main navigation">
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo" id="nav-logo" aria-label="Naini Stories Home">
+        <img src="logo.png" alt="Naini Stories logo" class="nav-logo-img" onerror="this.style.display='none'" />
+        <span class="nav-logo-text"
+          style="font-family: var(--font-serif); font-weight: 500; font-size: 1.1rem; margin-left:8px;">Naini
+          Stories</span>
+      </a>
+
+      <!-- Desktop nav links -->
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+        <li><a href="portfolio.html" class="nav-link" id="nav-portfolio">Portfolio</a></li>
+        <li><a href="about.html" class="nav-link" id="nav-about">About</a></li>
+        <li><a href="contact.html" class="nav-link active" id="nav-contact">Contact</a></li>
+      </ul>
+
+      <!-- Right actions -->
+      <div class="nav-actions">
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"
+          aria-controls="mobile-menu">
+          <span class="ham-line"></span>
+          <span class="ham-line"></span>
+          <span class="ham-line"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+      <ul role="list">
+        <li><a href="index.html" class="mob-link" id="mob-home">Home</a></li>
+        <li><a href="portfolio.html" class="mob-link" id="mob-portfolio">Portfolio</a></li>
+        <li><a href="about.html" class="mob-link" id="mob-about">About</a></li>
+        <li><a href="contact.html" class="mob-link" id="mob-contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════
+       CONTACT SECTION
+  ══════════════════════════════════════════════ -->
+  <section id="contact" class="contact-page-section" aria-labelledby="contact-heading">
+    <div class="contact-page-inner reveal">
+      <p class="section-eyebrow" style="letter-spacing: 0.2em; font-size: 0.75rem; color: #888;">GET IN TOUCH</p>
+      <h1 class="contact-page-title" id="contact-heading"
+        style="font-family: 'Playfair Display', serif; font-size: 3.5rem; margin: 20px 0;">Let's Create Together</h1>
+      <p class="contact-page-desc" style="font-size: 0.9rem; color: #666; max-width: 600px; margin: 0 auto 40px;">
+        Available for freelance opportunities and collaborations. I'd love to hear from you.</p>
+
+      <ul class="contact-page-list"
+        style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 15px; align-items: center; font-size: 0.95rem;">
+        <li>
+          <span style="margin-right: 10px;">✉</span>
+          <span>Email: <a href="mailto:nagendrachellu7@gmail.com"
+              style="color: inherit; text-decoration: none; font-weight: 500;">nagendrachellu7@gmail.com</a></span>
+        </li>
+        <li>
+          <span style="margin-right: 10px;">📞</span>
+          <span>Phone: <a href="tel:+918125661060" style="color: inherit; text-decoration: none; font-weight: 500;">+91
+              81256 61060</a></span>
+        </li>
+        <li>
+          <span style="margin-right: 10px;">📍</span>
+          <span>Location: Hyderabad, India</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════ -->
+  <footer class="site-footer" id="footer" role="contentinfo">
+    <div class="footer-inner">
+      <!-- Heading -->
+      <h2 class="footer-heading">Let's Work Together</h2>
+
+      <!-- Contact info -->
+      <p class="footer-contact-info">
+        Email: <a href="mailto:nagendrachellu7@gmail.com">nagendrachellu7@gmail.com</a>
+        <span class="footer-dot">·</span>
+        Phone: <a href="tel:+918125661060">+91 81256 61060</a>
+      </p>
+
+      <!-- Social icons row -->
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/naini_.stories?igsh=b200Y3k2dm5yeWFx" target="_blank"
+          rel="noopener noreferrer" class="footer-social-link" id="footer-instagram" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+            <circle cx="12" cy="12" r="4.5" />
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+          </svg>
+          <span>INSTAGRAM</span>
+        </a>
+        <a href="https://www.youtube.com/@NainishaChellu" target="_blank" rel="noopener noreferrer"
+          class="footer-social-link" id="footer-youtube" aria-label="YouTube">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path
+              d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+            <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" />
+          </svg>
+          <span>YOUTUBE</span>
+        </a>
+        <a href="https://pin.it/45lWkYanX" target="_blank" rel="noopener noreferrer" class="footer-social-link"
+          id="footer-pinterest" aria-label="Pinterest">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M8 12a4 4 0 1 1 4.5 3.97L11 21" />
+            <circle cx="12" cy="10" r="8" />
+          </svg>
+          <span>PINTEREST</span>
+        </a>
+      </div>
+
+      <div class="footer-divider" role="separator"></div>
+
+      <!-- Copyright -->
+      <p class="footer-copy">© 2026 NAINI STORIES. ALL RIGHTS RESERVED.</p>
+
+      <!-- Credit -->
+      <p class="footer-credit">
+        Website designed &amp; developed by <strong>Chellu Nagendra Vara Prasad</strong>
+      </p>
+    </div>
+  </footer>
+  <!-- Back to top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
