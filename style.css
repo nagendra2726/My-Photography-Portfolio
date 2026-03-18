@@ -774,7 +774,8 @@ ul { list-style: none; }
 .link-card:hover .link-card-icon { transform: scale(1.1) rotate(-5deg); }
 
 .link-card--instagram .link-card-icon { background: linear-gradient(135deg, #f09433, #dc2743, #bc1888); color:#fff; }
-.link-card--youtube   .link-card-icon { background: linear-gradient(135deg, #ff6b6b, #ee0979); color:#fff; }
+.link-card--youtube   .link-card-icon { background: linear-gradient(135deg, #FF0000, #CC0000); color:#fff; }
+.link-card--pinterest .link-card-icon { background: linear-gradient(135deg, #E60023, #BD081C); color:#fff; }
 .link-card--blog      .link-card-icon { background: linear-gradient(135deg, #a8edea, #84fab0); color:#2a6a55; }
 .link-card--collab    .link-card-icon { background: linear-gradient(135deg, #fccb90, #d57eeb); color:#5a2a6a; }
 .link-card--shop      .link-card-icon { background: linear-gradient(135deg, #fbc2eb, #a18cd1); color:#fff; }
@@ -1040,6 +1041,10 @@ ul { list-style: none; }
   opacity: 0.85;
 }
 .footer-brand .footer-name { display: none; }
+
+.footer-social-link#footer-instagram:hover { color: #E1306C; }
+.footer-social-link#footer-youtube:hover   { color: #FF0000; }
+.footer-social-link#footer-pinterest:hover { color: #E60023; }
 
 .footer-nav { display: flex; gap: 6px; flex-wrap: wrap; }
 .footer-link {
