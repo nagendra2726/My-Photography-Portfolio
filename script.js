@@ -52,20 +52,32 @@ const mobileMenu = $('mobile-menu');
 function openMenu() {
   hamburger.classList.add('open');
   mobileMenu.classList.add('open');
+  document.body.classList.add('menu-open');
   hamburger.setAttribute('aria-expanded', 'true');
-  document.body.style.overflow = 'hidden';
 }
 
 function closeMenu() {
   hamburger.classList.remove('open');
   mobileMenu.classList.remove('open');
+  document.body.classList.remove('menu-open');
   hamburger.setAttribute('aria-expanded', 'false');
-  document.body.style.overflow = '';
 }
 
-hamburger.addEventListener('click', () => {
-  hamburger.classList.contains('open') ? closeMenu() : openMenu();
-});
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.contains('open') ? closeMenu() : openMenu();
+  });
+
+  // Close on overlay click
+  mobileMenu.addEventListener('click', (e) => {
+    if (e.target === mobileMenu) closeMenu();
+  });
+
+  // Close on ESC key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMenu();
+  });
+}
 
 // Close on any mobile link click
 $$('.mob-link, .mob-instagram').forEach(el => {
