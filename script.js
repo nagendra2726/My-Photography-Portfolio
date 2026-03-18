@@ -164,7 +164,7 @@ function showToast(msg) {
 }
 
 // Trigger toast on "coming soon" links
-['link-youtube', 'link-blog', 'link-shop'].forEach(id => {
+['link-blog', 'link-shop'].forEach(id => {
   const el = $(id);
   if (!el) return;
   el.addEventListener('click', e => {

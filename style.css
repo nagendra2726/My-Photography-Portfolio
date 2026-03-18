@@ -202,22 +202,31 @@ ul { list-style: none; }
 .hamburger {
   display: none;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 5px;
-  padding: 6px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.2s;
+  /* Centering fix — remove default flex if needed */
 }
+
+.hamburger:hover { background: rgba(0,0,0,0.04); }
+
 .ham-line {
   display: block;
   width: 22px;
-  height: 1.5px;
+  height: 2px;
   background: var(--text);
   border-radius: 99px;
   transition: var(--tr);
   transform-origin: center;
 }
-.hamburger.open .ham-line:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.hamburger.open .ham-line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .hamburger.open .ham-line:nth-child(2) { opacity: 0; transform: scaleX(0); }
-.hamburger.open .ham-line:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+.hamburger.open .ham-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* Mobile Menu */
 .mobile-menu {
