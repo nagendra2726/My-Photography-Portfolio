@@ -103,15 +103,13 @@ ul { list-style: none; }
 /* ── HEADER / NAV ───────────────────────────────────────────── */
 #site-header {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1100;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid transparent;
-  transition: transform 0.4s var(--ease), background 0.3s var(--ease), box-shadow 0.3s var(--ease);
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 #site-header.scrolled {
   border-bottom-color: var(--border);
@@ -233,35 +231,38 @@ ul { list-style: none; }
 .hamburger.open .ham-line:nth-child(2) { opacity: 0; transform: scaleX(0); }
 .hamburger.open .ham-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* Mobile Menu */
-/* Mobile Menu Overlay (Dark Background) */
+/* ── PREMIUM SIDE DRAWER (INSTAGRAM-STYLE) ── */
 .mobile-menu {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   transition: opacity 0.4s ease, visibility 0.4s;
   display: flex;
-  justify-content: flex-end; /* Align drawer to the right */
+  justify-content: flex-end;
 }
 
-/* Mobile Menu Drawer (The sidebar) */
 .mobile-menu-drawer {
-  width: 100%;
-  height: 100%;
-  background: var(--white);
-  box-shadow: -10px 0 40px rgba(0,0,0,0.1);
+  width: 300px;
+  height: 100vh;
+  background: #fcfaf7; /* Premium soft beige */
+  box-shadow: -15px 0 50px rgba(0,0,0,0.15);
   transform: translateX(100%);
-  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   padding: 100px 32px 40px;
   overflow-y: auto;
+  position: relative;
+}
+
+@media (max-width: 640px) {
+  .mobile-menu-drawer { width: 85%; }
 }
 
 .mobile-menu.open {
@@ -277,56 +278,75 @@ ul { list-style: none; }
 .mobile-menu ul {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
   width: 100%;
 }
 
 .mobile-menu li {
   width: 100%;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  transition-delay: calc(0.1s + (var(--i) * 0.05s));
+}
+
+.mobile-menu.open li {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .mob-link {
   font-family: var(--font-sans);
-  font-size: 1.05rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 700;
   color: var(--text);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  padding: 16px 24px;
-  border-radius: 14px;
-  border: 1.5px solid var(--border);
-  background: var(--white);
+  padding: 18px 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.05);
+  background: rgba(255,255,255,0.5);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: var(--tr), transform 0.25s var(--ease-back);
+  transition: all 0.3s var(--ease);
+  position: relative;
 }
 
 .mob-link:hover, .mob-link.active {
   background: var(--text);
-  color: var(--white);
+  color: #fff;
   border-color: var(--text);
   transform: translateX(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .mob-instagram {
-  margin-top: 24px;
-  font-size: 0.9rem;
-  font-weight: 700;
+  margin-top: 32px;
+  font-size: 0.95rem;
+  font-weight: 800;
   color: var(--white);
   background: linear-gradient(135deg, #f09433, #dc2743, #bc1888);
-  padding: 14px 32px;
-  border-radius: 14px;
-  letter-spacing: 0.05em;
+  padding: 16px 32px;
+  border-radius: 99px;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   text-align: center;
-  transition: var(--tr);
-  box-shadow: 0 8px 24px rgba(220, 39, 67, 0.25);
+  transition: all 0.3s var(--ease);
+  box-shadow: 0 10px 30px rgba(220, 39, 67, 0.25);
+  opacity: 0;
+  transform: translateY(10px);
+  transition-delay: 0.4s;
+}
+
+.mobile-menu.open .mob-instagram {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .mob-instagram:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 32px rgba(220, 39, 67, 0.35);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(220, 39, 67, 0.35);
 }
 
 /* Prevent Body Scroll */
