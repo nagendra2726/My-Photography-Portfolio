@@ -117,12 +117,14 @@ ul { list-style: none; }
 }
 
 .nav-wrap {
+  width: 100%;
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 28px;
   height: 80px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 32px;
 }
 
@@ -205,12 +207,13 @@ ul { list-style: none; }
   justify-content: center;
   align-items: center;
   gap: 5px;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: 99px;
   transition: background 0.2s;
-  /* Centering fix — remove default flex if needed */
+  z-index: 101;
 }
 
 .hamburger:hover { background: rgba(0,0,0,0.04); }
@@ -233,20 +236,32 @@ ul { list-style: none; }
   position: fixed;
   top: 80px; left: 0; right: 0; bottom: 0;
   background: rgba(255,255,255,0.98);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
   z-index: 99;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  /* Hidden by default — properly invisible, non-interactive, off-screen */
+  padding-bottom: 40px;
+  /* Hidden by default */
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   transform: translateY(-20px);
-  transition: opacity 0.38s var(--ease), visibility 0.38s, transform 0.38s var(--ease);
+  transition: opacity 0.4s var(--ease), visibility 0.4s, transform 0.4s var(--ease);
+}
+.mobile-menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+.mobile-menu li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .mobile-menu.open {
   opacity: 1;
