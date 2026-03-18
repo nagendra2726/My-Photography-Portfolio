@@ -48,12 +48,10 @@ function onScroll() {
 ══════════════════════════════════════════════════════════════ */
 const hamburger  = $('hamburger');
 const mobileMenu = $('mobile-menu');
-const menuOverlay = $('mobile-menu-overlay');
 
 function openMenu() {
   hamburger.classList.add('open');
   mobileMenu.classList.add('open');
-  if (menuOverlay) menuOverlay.classList.add('open');
   hamburger.setAttribute('aria-expanded', 'true');
   document.body.style.overflow = 'hidden';
 }
@@ -61,7 +59,6 @@ function openMenu() {
 function closeMenu() {
   hamburger.classList.remove('open');
   mobileMenu.classList.remove('open');
-  if (menuOverlay) menuOverlay.classList.remove('open');
   hamburger.setAttribute('aria-expanded', 'false');
   document.body.style.overflow = '';
 }
@@ -69,10 +66,6 @@ function closeMenu() {
 hamburger.addEventListener('click', () => {
   hamburger.classList.contains('open') ? closeMenu() : openMenu();
 });
-
-if (menuOverlay) {
-  menuOverlay.addEventListener('click', closeMenu);
-}
 
 // Close on any mobile link click
 $$('.mob-link, .mob-instagram').forEach(el => {
