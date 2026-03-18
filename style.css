@@ -242,8 +242,9 @@ ul { list-style: none; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding-bottom: 40px;
+  justify-content: flex-start;
+  padding: 60px 28px 40px;
+  overflow-y: auto;
   /* Hidden by default */
   opacity: 0;
   visibility: hidden;
